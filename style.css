@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  background-color: black;
+}
+ul {
+  text-align: center;
+  padding: 20px;
+}
+ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.2s linear;
+  position: relative;
+  padding: 10px;
+}
+
+ul a:hover {
+  color: white;
+  background: crimson;
+}
+
+ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: crimson;
+  transition: width 0.2s linear;
+}
+
+ul a:hover::after {
+  width: 100%;
+}
+
+ul a::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: crimson;
+  transition: width 0.2s linear;
+}
+
+ul a:hover::before {
+  width: 100%;
+}
